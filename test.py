@@ -48,23 +48,24 @@ for i in range(len(testFiles)):
         
         result.write(str(t[3]))
         result.write("\n")
+    
+    if (len(test) != 0):    
+        best = max(test, key = lambda x: x[3])
+        cheat.write(str1) 
+        cheat.write(" ")
         
-    best = max(test, key = lambda x: x[3])
-    cheat.write(str1) 
-    cheat.write(" ")
-    
-    cheat.write(str(int(best[0])))
-    cheat.write(" ")
-    
-    cheat.write(str(int(best[1])))   
-    cheat.write(" ")
-    
-    cheat.write(str(int(best[2])))
-    cheat.write(" ")
-    
-    cheat.write(str(int(best[2])))
-    cheat.write(" ")
-    
-    cheat.write(str(best[3]))
-    cheat.write("\n")
+        cheat.write(str(int(best[0])))
+        cheat.write(" ")
         
+        cheat.write(str(int(best[1])))   
+        cheat.write(" ")
+        
+        cheat.write(str(int(best[2])))
+        cheat.write(" ")
+        
+        cheat.write(str(int(best[2])))
+        cheat.write(" ")
+        
+        cheat.write(str(best[3]))
+        cheat.write("\n")
+            

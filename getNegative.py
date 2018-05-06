@@ -35,9 +35,7 @@ def getNegative(trainFiles, label):
         
         #We want to get n negative per positive        
         for j in range(negativeFactor) :
-            print(i)
-            print(j)
-            print("negative")
+            print(i * negativeFactor + j)
             #Correct if gaussian blur areas can be considered as FALSE
             ypos = random.randrange(1, len(trainImg) - slidingWindowSize)
             xpos = random.randrange(1, len(trainImg[0]) - slidingWindowSize)

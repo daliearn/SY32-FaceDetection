@@ -28,7 +28,7 @@ imageLength = 450
 #Negative samples settings
 
 #ThreshHold for fake positive
-AreaTresh = 0.25
+AreaTresh = 0.33
 #number of negatives generated for one positive (integer)
 negativeFactor = 20
 #percentage of image used for second step

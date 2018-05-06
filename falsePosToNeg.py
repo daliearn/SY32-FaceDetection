@@ -53,8 +53,8 @@ def falsePosToNeg(clf, trainFiles, label, trainNegatives):
         facesDetected = testOneImage(clf, trainFiles[i])
         
         for face in facesDetected:
-                        
-            if(whichBoxToRemove(boxToTest, face) == 0):
+                         
+            if(whichBoxToRemove(boxToTest, face, config.AreaTresh) == 0):
                 neg = testedImg[
                     int(face[1]): int(face[1])+int(face[2]),
                     int(face[0]): int(face[0])+int(face[2])
@@ -63,8 +63,8 @@ def falsePosToNeg(clf, trainFiles, label, trainNegatives):
                 fd = hog(neg, pixels_per_cell=config.Cell, orientations=9)
                 fd = np.reshape(fd, (1, len(fd)))
                 trainNegatives = np.concatenate((trainNegatives, np.array(fd)))
-
-
+    
+    
                 neg = np.fliplr(neg)
                 fd = hog(neg, pixels_per_cell=config.Cell, orientations=9)
                 fd = np.reshape(fd, (1, len(fd)))                

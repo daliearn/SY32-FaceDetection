@@ -18,7 +18,7 @@ from warnings import catch_warnings
 
 
 #return the correct 
-def whichBoxToRemove(box1, box2) :
+def whichBoxToRemove(box1, box2, tresh = 0.5) :
     x1 = box1[0]
     x2 = box2[0]
     y1 = box1[1]
@@ -47,11 +47,11 @@ def whichBoxToRemove(box1, box2) :
    
     union = A1 + A2 - inter    
     Area = inter / union
-    
+
 
     #print(Area)
                
-    if (Area > 0.5):
+    if (Area > tresh):
         #print("To delete ")
         if (s1 > s2) :
             return 2
