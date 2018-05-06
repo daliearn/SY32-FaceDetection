@@ -30,6 +30,6 @@ imageLength = 450
 #ThreshHold for fake positive
 AreaTresh = 0.33
 #number of negatives generated for one positive (integer)
-negativeFactor = 20
+negativeFactor = 5
 #percentage of image used for second step
-trainingFactor = 0.4 
+trainingFactor = 0.1

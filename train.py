@@ -8,18 +8,9 @@ Created on Fri Apr 27 12:46:11 2018
 import glob
 import numpy as np
 
-from skimage.io import imread, imshow, imshow_collection
-from matplotlib.pyplot import show
-from skimage.util import img_as_float, crop
-from sklearn import svm
-from sklearn.utils import shuffle
-from skimage.transform import resize
-
-from whichBox import groupFaces, whichBoxToRemove
 from getPositive import getPositive
 from getNegative import getNegative
 from trainClassifier import trainClassifier
-from testOneImage import testOneImage
 from falsePosToNeg import falsePosToNeg
 
 from warnings import catch_warnings
