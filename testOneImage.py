@@ -93,14 +93,14 @@ def testOneImage(clf, imgFile = "projetface/test/0001.jpg"):
     ax.imshow(im)
     
     facesDetected3 = max(facesDetected2, key = lambda x: x[3])
-    '''    
+    
     for i in range(len(facesDetected2)):
         x = facesDetected2[i][0]
         y = facesDetected2[i][1]
         d = facesDetected2[i][2]
         rect = patches.Rectangle((x,y),d,d,linewidth=1,edgecolor='r',facecolor='none')
         ax.add_patch(rect)
-    '''
+    
     x = facesDetected3[0]
     y = facesDetected3[1]
     d = facesDetected3[2]
